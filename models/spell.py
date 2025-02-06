@@ -1,10 +1,11 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class Spell(BaseModel):
-    id: int
+    id: Optional[int] = None
     name: str
+    description: str
     level: int
     school: str
-    description: str
-    image_url: str
+    image_url: Optional[str] = None
